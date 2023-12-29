@@ -1,3 +1,5 @@
+import random
+
 print("Hello World")
 # Comentarios de una linea
 #print(12 * 5)
@@ -12,8 +14,16 @@ print("hola")
 print("hola")
 print("Hola gramola")
 
-user_option = input('Piedra, papel o tijera => ')
-computer_option = 'piedra'
+options=('piedra','papel', 'tijera')
+
+user_option = input('piedra, papel o tijera => ')
+user_option=user_option.lower()
+if not user_option in options:
+    print('esa opción no es valida')
+computer_option = random.choise(options)
+
+print('User option =>', user_option)
+print('Computer option =>', computer_option)
 
 if user_option == computer_option:
     print('Empate')
